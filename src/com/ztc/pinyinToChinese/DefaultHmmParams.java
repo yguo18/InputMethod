@@ -2,7 +2,6 @@ package com.ztc.pinyinToChinese;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -43,8 +42,8 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		String hanziList = null;
 		
 		try {
-			buf = new BufferedReader(new FileReader(FINAL_PINTOHANZI_FILE));
-			//buf = new BufferedReader(new InputStreamReader(new FileInputStream(FINAL_PINTOHANZI_FILE), charset));
+//			buf = new BufferedReader(new FileReader(FINAL_PINTOHANZI_FILE));
+			buf = new BufferedReader(new InputStreamReader(new FileInputStream(FINAL_PINTOHANZI_FILE), charset));
 			while((line = buf.readLine())!=null){
 				line = line.trim(); //È¥´¦¿Õ¸ñ
 				lineSplitResult = line.split("=");
@@ -79,7 +78,8 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		String hanzi = null;
 		Double num = null;
 		try{
-			buf = new BufferedReader(new FileReader(FINAL_START_FILE));
+//			buf = new BufferedReader(new FileReader(FINAL_START_FILE));
+			buf = new BufferedReader(new InputStreamReader(new FileInputStream(FINAL_START_FILE), charset));
 			while((line = buf.readLine())!=null){
 				line = line.trim();
 				lineSplitResult = line.split("=");
@@ -113,7 +113,8 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		String[] pinyinNumSplitSingleResult = null;
 		HashMap<String, Double> pinyinNumMap = null;
 		try{
-			buf = new BufferedReader(new FileReader(FINAL_EMISSION_FILE));
+//			buf = new BufferedReader(new FileReader(FINAL_EMISSION_FILE));
+			buf = new BufferedReader(new InputStreamReader(new FileInputStream(FINAL_EMISSION_FILE),charset));
 			while((line = buf.readLine())!=null){
 				line = line.trim();
 				lineSplitResult = line.split("=");
@@ -155,7 +156,8 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		String[] hanzi2StringSllitSingleResult = null;
 		HashMap<String, Double> hanzi2NumMap = null;
 		try {
-			buf = new BufferedReader(new FileReader(FINAL_TRANSITION_FILE));
+//			buf = new BufferedReader(new FileReader(FINAL_TRANSITION_FILE));
+			buf = new BufferedReader(new InputStreamReader(new FileInputStream(FINAL_TRANSITION_FILE), charset));
 			while((line = buf.readLine())!=null){
 				line = line.trim();
 				lineSplitResult = line.split("=");
@@ -216,7 +218,7 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		String hanziListString = pinyinToChineseMap.get(observation);
 		ArrayList<String> hanziList = new ArrayList<String>();
 		for(int i =0; i < hanziListString.length(); i++){
-			hanziList.add(hanziListString.charAt(i)+" ");
+			hanziList.add(hanziListString.charAt(i)+"");
 		}
 		return hanziList;
 	}
