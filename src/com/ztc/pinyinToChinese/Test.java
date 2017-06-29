@@ -6,9 +6,10 @@ import java.util.Scanner;
 public class Test {
 	public static void main(String[] args){
 		DefaultHmmParams hmmParams = new DefaultHmmParams();
-		while(true){
-			System.out.println("«Î ‰»Î∆¥“Ù£∫");
-			Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("«Î ‰»Î∆¥“Ù£∫");
+		while(sc.hasNext()){
+			
 			String pinyin = sc.nextLine();
 			String[] p = pinyin.split("\\s+");
 			ArrayList<String> s = new ArrayList<String>();
@@ -19,6 +20,7 @@ public class Test {
 				System.out.print(item.getPath());
 			}
 			System.out.println();
+			System.out.println("«Î ‰»Î∆¥“Ù£∫");
 		}
 	}
 }
