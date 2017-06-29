@@ -222,18 +222,18 @@ public class DefaultHmmParams implements HmmParamsInterface{
 		}
 		return hanziList;
 	}
-	public static void main(String[] args){
-		DefaultHmmParams hmmParams = new DefaultHmmParams();
-		ArrayList<String> observation = new ArrayList<String>();
-		observation.add("xi");
-		observation.add("an");
-		observation.add("dian");
-		observation.add("zi");
-		observation.add("ke");
-		observation.add("ji");
-		observation.add("da");
-		observation.add("xue");
-		Viterbi.compute(hmmParams, observation, 3, false);
-		
-	}
+//	public static void main(String[] args){
+//		DefaultHmmParams hmmParams = new DefaultHmmParams();
+//		ArrayList<String> observation = new ArrayList<String>();
+//		observation.add("xi");
+//		observation.add("an");
+//		observation.add("dian");
+//		observation.add("zi");
+//		observation.add("ke");
+//		observation.add("ji");
+//		observation.add("da");
+//		observation.add("xue");
+//		Viterbi.compute(hmmParams, observation, 3, false);
+//		
+//	}
 }
