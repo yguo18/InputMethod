@@ -54,11 +54,13 @@ HMM中的三个参数是通过sources文件夹下的文件训练而来，具体�
 
 3）TrieNode节点包含：
 
-	- `String name;` //结点的字符名称
-	- `int fre;` //单词出现的频率
-	- `boolean end;` //是否是单词结尾
-	- `boolean root;` //是否是根结点
-	- `Map<String, TrieNode> childrens;`//子节点信息
+```
+String name;    // 结点的字符名称
+int fre;        // 单词出现的频率
+boolean end;    // 是否是单词结尾
+boolean root;   // 是否是根结点
+Map<String, TrieNode> childrens;   // 子节点信息
+```
 	
 **遇到的问题**：
 
@@ -84,7 +86,7 @@ java ProcessHanziPinyin
 
 ##### 3. 生成基础HMM模型
 
-利用`sentence.txt word.txt hanzipinyin.txt`生成HMM模型的三个参数模型`base_start、base_emission、base_transition`
+利用`sentence.txt`, `word.txt`, `hanzipinyin.txt`生成HMM模型的三个参数模型`base_start`, `base_emission`, `base_transition`
 ```
 javac GenerateBase.java   
 java GenerateBase
