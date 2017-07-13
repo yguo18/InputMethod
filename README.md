@@ -70,13 +70,15 @@ Viterbi算法：用来求解隐含序列的最大可能性匹配，每次取概�
 
 ##### 1. 首先运行train文件夹下
 ```
-javac ProcessArticle.java      java  ProcessArticle  
+javac ProcessArticle.java      
+java  ProcessArticle  
 ```
 会产生一个`sentences.txt`
 
 ##### 2. 运行train文件夹下得：
 ```
-javac ProcessHanziPinyin.java  java ProcessHanziPinyin
+javac ProcessHanziPinyin.java  
+java ProcessHanziPinyin
 ```
 会产生一个文件`pinyin2hanzi.txt`
 
@@ -84,18 +86,21 @@ javac ProcessHanziPinyin.java  java ProcessHanziPinyin
 
 利用`sentence.txt word.txt hanzipinyin.txt`生成HMM模型的三个参数模型`base_start、base_emission、base_transition`
 ```
-javac GenerateBase.java   java GenerateBase
+javac GenerateBase.java   
+java GenerateBase
 ```
 训练产生的数据是出现的次数，需要转换成概率
 
 ##### 4. HMM模型finally
 ```
-javac GenerateFinally.java  java GenerateFinally
+javac GenerateFinally.java  
+java GenerateFinally
 ```
 
 ##### 5. 最终测试
 ```
-javac Test.java  java Test
+javac Test.java  
+java Test
 ```
 # note:
 当然也可利用eclipse进行编译
