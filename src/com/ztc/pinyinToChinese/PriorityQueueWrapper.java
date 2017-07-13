@@ -39,8 +39,8 @@ public class PriorityQueueWrapper {
 	
 	
 	class Item{
-		private double score;
-		private ArrayList<String> path;
+		private double score;   // 记录评分
+		private ArrayList<String> path; // 记录路径
 		
 		public Item(double score, ArrayList<String> path) {
 			this.score = score;
@@ -61,7 +61,7 @@ public class PriorityQueueWrapper {
 		}
 		
 	}
-	class MyComparator implements Comparator<Item>{
+	class MyComparator implements Comparator<Item>{  // 优先队列中评分小的记录在前面
 		@Override
 		public int compare(Item i1, Item i2){
 			if(i1.getScore() < i2.getScore())
