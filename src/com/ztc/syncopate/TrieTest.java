@@ -8,7 +8,7 @@ import com.ztc.readFile.FileTools;
 public class TrieTest {
 	static TrieTree tree = new TrieTree("root");
 	public static void main(String[] args){
-		String spell = "maozhuxiwansui";
+		String spell = "xg";
 		initSpell();
 		System.out.println(tree.splitSpell(spell));
 	}

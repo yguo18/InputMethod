@@ -12,6 +12,7 @@ public class TrieTree {
 	 * ²åÈë²Ù×÷
 	 * @param word
 	 */
+	
 	public void insert(String word){
 		//...
 		TrieNode node = root;
